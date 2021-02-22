@@ -1,0 +1,17 @@
+version: '3'
+services:
+  proposals-db:
+    image: postgres:9.6
+    volumes:
+      - postgres-volume2:/var/lib/postgresql/data
+      - ./databases.sql:/docker-entrypoint-initdb.d/databases.sql
+    ports:
+      - "5433:5432"
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - MAX_CONNECTIONS=300
+
+volumes:
+  postgres-volume2:

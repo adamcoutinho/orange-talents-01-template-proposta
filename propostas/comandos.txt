@@ -1,0 +1,25 @@
+docker rm -vf $(docker ps -a -q)
+docker rmi -f $(docker images -a -q)
+docker volume prune
+
+
+ mvn clean install -Dspring.profiles.active=prod -DSERVER_PORT=1111 -DDATASOURCE_DRIVER=org.postgresql.Driver -DDATASOURCE_USER=postgres -DDATASOURCE_PASSWD=postgres -DDIALECT=org.hibernate.dialect.PostgreSQL95Dialect -DDATASOURCE_DB=jdbc:postgresql://localhost:5433/postgres
+ mvn clean install -Dspring.profiles.active=prod -DSERVER_PORT=1111 -DDATASOURCE_DRIVER=org.postgresql.Driver -DDATASOURCE_USER=postgres -DDATASOURCE_PASSWD=postgres -DDIALECT=org.hibernate.dialect.PostgreSQL95Dialect -DDATASOURCE_DB=jdbc:postgresql://localhost:5433/postgres
+ mvn clean install -Dspring.profiles.active=prod -DSERVER_PORT=6666 -DDATASOURCE_DRIVER=org.postgresql.Driver -DDATASOURCE_USER=postgres -DDATASOURCE_PASSWD=postgres -DDIALECT=org.hibernate.dialect.PostgreSQL95Dialect -DDATASOURCE_DB=jdbc:postgresql://postgres:5432/proposals_db
+ mvn clean install -Dspring.profiles.active=prod  -Dspring.datasource.password=postgres -Dspring.datasource.username=postgres -Dspring.datasource.url=jdbc:postgresql://localhost:5433/proposals_db -Dspring.datasource.driver-class-name=org.postgresql.Driver
+
+#importante
+ mvn clean install -Dspring.profiles.active=prod -DskipTests=true
+
+
+   propostas:
+     image: 'propostas'
+     environment:
+       SERVER_PORT: 6666
+       DATASOURCE_DB: jdbc:postgresql://postgres:5432/propostas_db
+       DATASOURCE_USER: keycloak
+       DATASOURCE_PASSWD: postgres
+       DATASOURCE_DRIVER: org.postgresql.Driver
+     network_mode: bridge
+     depends_on:
+       - postgres

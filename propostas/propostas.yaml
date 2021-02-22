@@ -1,0 +1,42 @@
+version: '3'
+services:    
+  propostasdb:
+    image: postgres:9.6
+    volumes:
+         - postgres-volume2:/var/lib/postgresql/data
+         - ./databases.sql:/docker-entrypoint-initdb.d/databases.sql
+    ports:
+         - "5433:5432"
+    environment:
+         - POSTGRES_DB=proposals_db
+         - POSTGRES_USER=postgres
+         - POSTGRES_PASSWORD=postgres
+         - MAX_CONNECTIONS=300
+    networks:
+      - my-network
+
+  propostas:
+    image: propostas
+    build:
+      context: .
+      dockerfile: Dockerfile.proposta
+    restart: always
+    ports:
+      - 6666:6666
+    environment:
+      - SERVER_PORT=6666
+      - DATASOURCE_DB=jdbc:postgresql://propostasdb:5432/proposals_db
+      - DATASOURCE_USER=postgres
+      - DATASOURCE_PASSWD=postgres
+      - DATASOURCE_DRIVER=org.postgresql.Driver
+    depends_on:
+      - postgres
+    networks:
+      - my-network
+
+volumes:   
+  postgres-volume2:
+
+networks:
+  my-network:
+    driver: bridge
