@@ -1,4 +1,4 @@
-package br.com.zup.propostas.core.proposta;
+package br.com.zup.propostas.models;
 
 import java.util.UUID;
 
@@ -11,7 +11,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
-import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 

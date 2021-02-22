@@ -1,6 +1,7 @@
 package br.com.zup.propostas.core.biometria;
 
-import br.com.zup.propostas.core.proposta.Cartao;
+import br.com.zup.propostas.models.Cartao;
+import br.com.zup.propostas.models.Biometria;
 import br.com.zup.propostas.shared.UniqueValue;
 
 import javax.persistence.EntityManager;

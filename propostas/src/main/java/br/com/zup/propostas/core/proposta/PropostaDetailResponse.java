@@ -1,5 +1,7 @@
 package br.com.zup.propostas.core.proposta;
 
+import br.com.zup.propostas.models.Proposta;
+
 public class PropostaDetailResponse {
 
 	private String documento;

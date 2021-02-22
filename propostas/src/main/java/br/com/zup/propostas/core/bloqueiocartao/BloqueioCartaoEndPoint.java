@@ -3,9 +3,12 @@ package br.com.zup.propostas.core.bloqueiocartao;
 import br.com.zup.propostas.api.cartoes.CartoesFeign;
 import br.com.zup.propostas.api.cartoes.ResultadoBloqueioDetailResponse;
 import br.com.zup.propostas.api.cartoes.SolicitacaoBloqueioFormRequest;
-import br.com.zup.propostas.core.proposta.Cartao;
+import br.com.zup.propostas.models.Cartao;
+import br.com.zup.propostas.models.BloqueioCartao;
 import br.com.zup.propostas.shared.NaoExisteNumeroCartao;
 import feign.FeignException;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -25,7 +28,7 @@ import java.net.URI;
 @RequestMapping("/cartao")
 @Validated
 public class BloqueioCartaoEndPoint {
-
+    private final Logger logger = LoggerFactory.getLogger(BloqueioCartaoEndPoint.class);
     @Autowired
     private EntityManager manager;
 
@@ -50,7 +53,8 @@ public class BloqueioCartaoEndPoint {
                     .path("/cartao/{identificador-cartao}/bloqueio")
                     .buildAndExpand(identificadorCartao).toUri();
 
-            ResultadoBloqueioDetailResponse cartaoDetailResponse = cartoesFeign.solicitarBloqueioCartao(new SolicitacaoBloqueioFormRequest(identificadorCartao));
+            ResultadoBloqueioDetailResponse cartaoDetailResponse = cartoesFeign.solicitarBloqueioCartao(identificadorCartao, new SolicitacaoBloqueioFormRequest("string"));
+
 
             BloqueioCartao bloqueioCartao = new BloqueioCartao(
                     identificadorCartao,
@@ -60,9 +64,10 @@ public class BloqueioCartaoEndPoint {
             );
 
             this.manager.persist(bloqueioCartao);
-
+            logger.info("bloqueio de cartão efetuado com sucesso.");
             return ResponseEntity.ok().build();
         }catch (FeignException e){
+            logger.error("bloqueio de cartão já existe || não atendeu as regras de bloqueio.");
             return ResponseEntity.ok().body("não houver alteração de estado.");
         }
     }

@@ -1,0 +1,40 @@
+<configuration>
+    <property  name="LOG_LOCATION" value="/home/adamcoutinho/workspace-orangestack/orange-talents-01-template-proposta/propostas"  />
+
+    <appender name="LOG_LOCATION-TO-FILE" class="ch.qos.logback.core.FileAppender">
+
+        <file>${LOG_PATH}/file.log</file>
+
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <Pattern>
+                %d{dd-MM-yyyy HH:mm:ss.SSS} [%thread] %-5level %logger{36}.%M - %msg%n
+            </Pattern>
+        </encoder>
+
+    </appender>
+    <appender name="consoleAppender" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder class="net.logstash.logback.encoder.LoggingEventCompositeJsonEncoder">
+            <providers>
+                <timestamp/>
+                <version/>
+                <loggerName/>
+                <threadName/>
+                <logLevel/>
+                <mdc/>
+                <message/>
+                <stackTrace/>
+            </providers>
+        </encoder>
+    </appender>
+
+    <logger name="jsonLogger" additivity="false" level="DEBUG">
+        <appender-ref ref="LOG_LOCATION-TO-FILE"/>
+        <appender-ref ref="consoleAppender"/>
+    </logger>
+
+    <root level="INFO">
+        <appender-ref ref="LOG_LOCATION-TO-FILE"/>
+        <appender-ref ref="consoleAppender"/>
+    </root>
+
+</configuration>

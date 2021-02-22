@@ -1,5 +1,7 @@
 package br.com.zup.propostas.core.proposta;
 
+import br.com.zup.propostas.models.Endereco;
+
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 

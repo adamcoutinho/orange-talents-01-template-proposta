@@ -1,7 +1,4 @@
-package br.com.zup.propostas.core.proposta;
-
-import br.com.zup.propostas.core.biometria.Biometria;
-import br.com.zup.propostas.core.bloqueiocartao.BloqueioCartao;
+package br.com.zup.propostas.models;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -45,6 +42,9 @@ public class Cartao {
 
     @OneToMany(mappedBy = "cartao")
     private List<BloqueioCartao> bloqueios;
+
+    @OneToMany(mappedBy = "cartao")
+    private List<AvisoViagem> avisos;
 
 
 //    @OneToOne

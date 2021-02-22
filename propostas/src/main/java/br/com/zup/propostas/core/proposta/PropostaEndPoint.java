@@ -3,6 +3,7 @@ package br.com.zup.propostas.core.proposta;
 import br.com.zup.propostas.api.solicitacaoanalise.SolicitacaoAnaliseFeign;
 import br.com.zup.propostas.api.solicitacaoanalise.SolicitacaoAnaliseRequest;
 import br.com.zup.propostas.api.solicitacaoanalise.SolicitacaoAnaliseResponse;
+import br.com.zup.propostas.models.Proposta;
 import feign.FeignException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -85,7 +86,7 @@ public class PropostaEndPoint {
                     .buildAndExpand(proposta.getUuidProposta())
                     .toUri();
 
-            logger.info("proposta processada.");
+            logger.info("proposta efetuada com sucesso.");
             return ResponseEntity.created(location).build();
 
         } catch (FeignException e) {

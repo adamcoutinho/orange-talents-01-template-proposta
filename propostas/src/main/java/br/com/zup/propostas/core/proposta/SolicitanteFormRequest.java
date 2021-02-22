@@ -7,6 +7,8 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Positive;
 
+import br.com.zup.propostas.models.Endereco;
+import br.com.zup.propostas.models.Solicitante;
 import br.com.zup.propostas.shared.DocumentoIdenfitificacao;
 
 public class SolicitanteFormRequest {

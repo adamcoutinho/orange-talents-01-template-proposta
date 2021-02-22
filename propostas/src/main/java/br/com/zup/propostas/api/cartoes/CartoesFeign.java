@@ -15,7 +15,7 @@ public interface CartoesFeign {
     CartaoDetailResponse gerarCartao(CartaoFormRequest request);
 
     @PostMapping("/api/cartoes/{id}/bloqueios")
-    ResultadoBloqueioDetailResponse solicitarBloqueioCartao(@PathVariable("id") SolicitacaoBloqueioFormRequest solicitacaoBloqueio);
+    ResultadoBloqueioDetailResponse solicitarBloqueioCartao(@PathVariable("id") String identifcadorCartaoFormatoBanco,SolicitacaoBloqueioFormRequest solicitacaoBloqueioFormRequest);
 
 
 

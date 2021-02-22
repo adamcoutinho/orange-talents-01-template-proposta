@@ -1,6 +1,4 @@
-package br.com.zup.propostas.core.bloqueiocartao;
-
-import br.com.zup.propostas.core.proposta.Cartao;
+package br.com.zup.propostas.models;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

@@ -1,9 +1,8 @@
-package br.com.zup.propostas.core.proposta;
+package br.com.zup.propostas.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.Embedded;
-import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;

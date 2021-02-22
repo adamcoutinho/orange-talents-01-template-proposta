@@ -1,7 +1,9 @@
 package br.com.zup.propostas.core.biometria;
 
-import br.com.zup.propostas.core.proposta.Cartao;
+import br.com.zup.propostas.models.Biometria;
 import br.com.zup.propostas.shared.NaoExisteNumeroCartao;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
@@ -26,7 +28,7 @@ import java.util.Base64;
 @RequestMapping("/biometria")
 @Validated
 public class BiometriaEndPoint {
-
+    private final Logger logger = LoggerFactory.getLogger(BiometriaEndPoint.class);
     @Autowired
     private EntityManager manager;
 
@@ -52,7 +54,7 @@ public class BiometriaEndPoint {
                 .path("/biometria/{identificador-cartao}/criar")
                 .buildAndExpand(identificadorCartao)
                 .toUri();
-
+        logger.info("biometria efetuada com sucesso.");
         return ResponseEntity.created(uri).build();
     }
 

@@ -1,5 +1,7 @@
 package br.com.zup.propostas.core.proposta;
 
+import br.com.zup.propostas.models.Proposta;
+
 import javax.persistence.EntityManager;
 import javax.validation.Valid;
 

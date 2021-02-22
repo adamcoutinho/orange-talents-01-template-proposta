@@ -1,6 +1,4 @@
-package br.com.zup.propostas.core.biometria;
-
-import br.com.zup.propostas.core.proposta.Cartao;
+package br.com.zup.propostas.models;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

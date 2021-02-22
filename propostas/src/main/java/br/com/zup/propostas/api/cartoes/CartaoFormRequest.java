@@ -1,6 +1,6 @@
 package br.com.zup.propostas.api.cartoes;
 
-import br.com.zup.propostas.core.proposta.Proposta;
+import br.com.zup.propostas.models.Proposta;
 
 public class CartaoFormRequest {
     private String documento;

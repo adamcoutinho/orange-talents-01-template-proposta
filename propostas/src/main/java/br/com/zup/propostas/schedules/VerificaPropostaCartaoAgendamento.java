@@ -3,9 +3,9 @@ package br.com.zup.propostas.schedules;
 import br.com.zup.propostas.api.cartoes.CartaoDetailResponse;
 import br.com.zup.propostas.api.cartoes.CartaoFormRequest;
 import br.com.zup.propostas.api.cartoes.CartoesFeign;
-import br.com.zup.propostas.core.proposta.Cartao;
-import br.com.zup.propostas.core.proposta.Proposta;
-import br.com.zup.propostas.core.proposta.StatusProposta;
+import br.com.zup.propostas.models.Cartao;
+import br.com.zup.propostas.models.Proposta;
+import br.com.zup.propostas.models.StatusProposta;
 import feign.FeignException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -21,6 +21,7 @@ import java.util.List;
 @Component
 @EnableScheduling
 public class VerificaPropostaCartaoAgendamento {
+
     private final Logger logger = LoggerFactory.getLogger(VerificaPropostaCartaoAgendamento.class);
     private final long SEGUNDO = 1000;
     private final long MINUTO = SEGUNDO * 60;
@@ -51,7 +52,7 @@ public class VerificaPropostaCartaoAgendamento {
                     this.manager.merge(proposta);
                     Cartao cartao = new Cartao(proposta.getIdCartao());
                     this.manager.persist(cartao);
-                    logger.info("proposta gerada");
+                    logger.info("cartão associado a proposta com sucesso.");
                 }
             }
         } catch (FeignException e) {

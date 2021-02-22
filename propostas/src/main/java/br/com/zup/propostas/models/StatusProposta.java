@@ -1,4 +1,4 @@
-package br.com.zup.propostas.core.proposta;
+package br.com.zup.propostas.models;
 
 public enum StatusProposta {
  
