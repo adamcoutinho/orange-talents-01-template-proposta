@@ -3465,3 +3465,169 @@ java.net.ConnectException: Conexão recusada (Connection refused)
 22-02-2021 17:09:57.552 [SpringContextShutdownHook] INFO  o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl.perform - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
 22-02-2021 17:09:57.570 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
 22-02-2021 17:09:57.578 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+22-02-2021 17:30:29.672 [background-preinit] INFO  o.h.validator.internal.util.Version.<clinit> - HV000001: Hibernate Validator 6.1.7.Final
+22-02-2021 17:30:29.690 [restartedMain] INFO  b.c.z.propostas.PropostasApplication.logStarting - Starting PropostasApplication using Java 11.0.9.1 on ZUP-5532 with PID 70541 (/home/adamcoutinho/workspace-orangestack/orange-talents-01-template-proposta/propostas/target/classes started by adamcoutinho in /home/adamcoutinho/workspace-orangestack/orange-talents-01-template-proposta/propostas)
+22-02-2021 17:30:29.692 [restartedMain] INFO  b.c.z.propostas.PropostasApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+22-02-2021 17:30:29.754 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.logTo - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+22-02-2021 17:30:29.755 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.logTo - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+22-02-2021 17:30:31.149 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+22-02-2021 17:30:31.167 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 9 ms. Found 0 JPA repository interfaces.
+22-02-2021 17:30:31.420 [restartedMain] INFO  o.s.cloud.context.scope.GenericScope.setSerializationId - BeanFactory id=2dcd0a18-54b2-30d3-889c-9ee1fcff6dbf
+22-02-2021 17:30:32.063 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 1111 (http)
+22-02-2021 17:30:32.073 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-1111"]
+22-02-2021 17:30:32.073 [restartedMain] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+22-02-2021 17:30:32.074 [restartedMain] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.41]
+22-02-2021 17:30:32.165 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+22-02-2021 17:30:32.165 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 2409 ms
+22-02-2021 17:30:32.587 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+22-02-2021 17:30:32.632 [restartedMain] INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.4.27.Final
+22-02-2021 17:30:32.767 [restartedMain] INFO  o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+22-02-2021 17:30:32.876 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+22-02-2021 17:30:32.972 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+22-02-2021 17:30:33.001 [restartedMain] INFO  org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+22-02-2021 17:30:33.212 [restartedMain] ERROR o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Failed to initialize JPA EntityManagerFactory: Use of @OneToMany or @ManyToMany targeting an unmapped class: br.com.zup.propostas.models.Cartao.avisos[br.com.zup.propostas.models.AvisoViagem]
+22-02-2021 17:30:33.213 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.refresh - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: Use of @OneToMany or @ManyToMany targeting an unmapped class: br.com.zup.propostas.models.Cartao.avisos[br.com.zup.propostas.models.AvisoViagem]
+22-02-2021 17:30:33.216 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+22-02-2021 17:30:33.227 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+22-02-2021 17:47:06.337 [background-preinit] INFO  o.h.validator.internal.util.Version.<clinit> - HV000001: Hibernate Validator 6.1.7.Final
+22-02-2021 17:47:06.350 [restartedMain] INFO  b.c.z.propostas.PropostasApplication.logStarting - Starting PropostasApplication using Java 11.0.9.1 on ZUP-5532 with PID 72045 (/home/adamcoutinho/workspace-orangestack/orange-talents-01-template-proposta/propostas/target/classes started by adamcoutinho in /home/adamcoutinho/workspace-orangestack/orange-talents-01-template-proposta/propostas)
+22-02-2021 17:47:06.351 [restartedMain] INFO  b.c.z.propostas.PropostasApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+22-02-2021 17:47:06.409 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.logTo - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+22-02-2021 17:47:06.410 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.logTo - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+22-02-2021 17:47:07.590 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+22-02-2021 17:47:07.626 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 12 ms. Found 0 JPA repository interfaces.
+22-02-2021 17:47:07.941 [restartedMain] INFO  o.s.cloud.context.scope.GenericScope.setSerializationId - BeanFactory id=2dcd0a18-54b2-30d3-889c-9ee1fcff6dbf
+22-02-2021 17:47:08.589 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 1111 (http)
+22-02-2021 17:47:08.598 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-1111"]
+22-02-2021 17:47:08.599 [restartedMain] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+22-02-2021 17:47:08.599 [restartedMain] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.41]
+22-02-2021 17:47:08.682 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+22-02-2021 17:47:08.683 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 2272 ms
+22-02-2021 17:47:09.003 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+22-02-2021 17:47:09.056 [restartedMain] INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.4.27.Final
+22-02-2021 17:47:09.184 [restartedMain] INFO  o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+22-02-2021 17:47:09.281 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+22-02-2021 17:47:09.375 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+22-02-2021 17:47:09.408 [restartedMain] INFO  org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+22-02-2021 17:47:09.628 [restartedMain] ERROR o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Failed to initialize JPA EntityManagerFactory: Use of @OneToMany or @ManyToMany targeting an unmapped class: br.com.zup.propostas.models.Cartao.avisos[br.com.zup.propostas.models.AvisoViagem]
+22-02-2021 17:47:09.628 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.refresh - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: Use of @OneToMany or @ManyToMany targeting an unmapped class: br.com.zup.propostas.models.Cartao.avisos[br.com.zup.propostas.models.AvisoViagem]
+22-02-2021 17:47:09.630 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+22-02-2021 17:47:09.641 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+22-02-2021 17:47:09.646 [restartedMain] INFO  o.a.catalina.core.StandardService.log - Stopping service [Tomcat]
+22-02-2021 17:47:09.671 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener.logMessage - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+22-02-2021 17:47:09.690 [restartedMain] ERROR o.s.boot.SpringApplication.reportFailure - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: Use of @OneToMany or @ManyToMany targeting an unmapped class: br.com.zup.propostas.models.Cartao.avisos[br.com.zup.propostas.models.AvisoViagem]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1788)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:609)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:531)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1159)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:913)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:588)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:767)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:426)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:326)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1311)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300)
+	at br.com.zup.propostas.PropostasApplication.main(PropostasApplication.java:17)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.hibernate.AnnotationException: Use of @OneToMany or @ManyToMany targeting an unmapped class: br.com.zup.propostas.models.Cartao.avisos[br.com.zup.propostas.models.AvisoViagem]
+	at org.hibernate.cfg.annotations.CollectionBinder.bindManyToManySecondPass(CollectionBinder.java:1332)
+	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:870)
+	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:795)
+	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:53)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processSecondPasses(InFlightMetadataCollectorImpl.java:1693)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processSecondPasses(InFlightMetadataCollectorImpl.java:1661)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:295)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1224)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1255)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1847)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1784)
+	... 22 common frames omitted
+22-02-2021 17:48:14.714 [background-preinit] INFO  o.h.validator.internal.util.Version.<clinit> - HV000001: Hibernate Validator 6.1.7.Final
+22-02-2021 17:48:14.760 [restartedMain] INFO  b.c.z.propostas.PropostasApplication.logStarting - Starting PropostasApplication using Java 11.0.9.1 on ZUP-5532 with PID 72166 (/home/adamcoutinho/workspace-orangestack/orange-talents-01-template-proposta/propostas/target/classes started by adamcoutinho in /home/adamcoutinho/workspace-orangestack/orange-talents-01-template-proposta/propostas)
+22-02-2021 17:48:14.762 [restartedMain] INFO  b.c.z.propostas.PropostasApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+22-02-2021 17:48:14.856 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.logTo - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+22-02-2021 17:48:14.857 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.logTo - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+22-02-2021 17:48:16.135 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+22-02-2021 17:48:16.167 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 17 ms. Found 0 JPA repository interfaces.
+22-02-2021 17:48:16.545 [restartedMain] INFO  o.s.cloud.context.scope.GenericScope.setSerializationId - BeanFactory id=2dcd0a18-54b2-30d3-889c-9ee1fcff6dbf
+22-02-2021 17:48:17.304 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 1111 (http)
+22-02-2021 17:48:17.320 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-1111"]
+22-02-2021 17:48:17.321 [restartedMain] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+22-02-2021 17:48:17.321 [restartedMain] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.41]
+22-02-2021 17:48:17.421 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+22-02-2021 17:48:17.422 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 2564 ms
+22-02-2021 17:48:17.996 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+22-02-2021 17:48:18.096 [restartedMain] INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.4.27.Final
+22-02-2021 17:48:18.335 [restartedMain] INFO  o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+22-02-2021 17:48:18.539 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+22-02-2021 17:48:18.714 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+22-02-2021 17:48:18.753 [restartedMain] INFO  org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+22-02-2021 17:48:18.951 [restartedMain] ERROR o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Failed to initialize JPA EntityManagerFactory: Use of @OneToMany or @ManyToMany targeting an unmapped class: br.com.zup.propostas.models.Cartao.avisos[br.com.zup.propostas.models.AvisoViagem]
+22-02-2021 17:48:18.952 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.refresh - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: Use of @OneToMany or @ManyToMany targeting an unmapped class: br.com.zup.propostas.models.Cartao.avisos[br.com.zup.propostas.models.AvisoViagem]
+22-02-2021 17:48:18.954 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+22-02-2021 17:48:18.963 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+22-02-2021 17:48:18.968 [restartedMain] INFO  o.a.catalina.core.StandardService.log - Stopping service [Tomcat]
+22-02-2021 17:48:19.000 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener.logMessage - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+22-02-2021 17:48:19.046 [restartedMain] ERROR o.s.boot.SpringApplication.reportFailure - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: Use of @OneToMany or @ManyToMany targeting an unmapped class: br.com.zup.propostas.models.Cartao.avisos[br.com.zup.propostas.models.AvisoViagem]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1788)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:609)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:531)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1159)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:913)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:588)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:767)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:426)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:326)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1311)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300)
+	at br.com.zup.propostas.PropostasApplication.main(PropostasApplication.java:17)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.hibernate.AnnotationException: Use of @OneToMany or @ManyToMany targeting an unmapped class: br.com.zup.propostas.models.Cartao.avisos[br.com.zup.propostas.models.AvisoViagem]
+	at org.hibernate.cfg.annotations.CollectionBinder.bindManyToManySecondPass(CollectionBinder.java:1332)
+	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:870)
+	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:795)
+	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:53)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processSecondPasses(InFlightMetadataCollectorImpl.java:1693)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processSecondPasses(InFlightMetadataCollectorImpl.java:1661)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:295)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1224)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1255)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1847)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1784)
+	... 22 common frames omitted

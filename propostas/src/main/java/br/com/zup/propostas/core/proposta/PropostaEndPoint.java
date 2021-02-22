@@ -80,7 +80,6 @@ public class PropostaEndPoint {
             this.manager.persist(proposta);
 
 
-
             URI location = uriComponentsBuilder
                     .path("proposta/criar/")
                     .buildAndExpand(proposta.getUuidProposta())

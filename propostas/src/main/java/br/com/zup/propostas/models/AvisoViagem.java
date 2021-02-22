@@ -9,6 +9,7 @@ import javax.validation.constraints.Future;
 import javax.validation.constraints.NotBlank;
 import java.time.Instant;
 import java.time.LocalDate;
+import java.util.UUID;
 
 public class AvisoViagem {
 
@@ -20,6 +21,8 @@ public class AvisoViagem {
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sequence_avisoviagem")
     @SequenceGenerator(name = "sequence_avisoviagem", sequenceName = "sq_avisoviagem", allocationSize = 1)
     private Long id;
+
+    private String uuidAvisoViagem= UUID.randomUUID().toString();
 
     private Instant instant = Instant.now();
 
@@ -42,8 +45,8 @@ public class AvisoViagem {
     private Cartao cartao;
 
 
-    public AvisoViagem(@NotBlank String identificadorCartao, @NotBlank String destinoViagem, String ipAdress, String userAgent, @Future LocalDate dateTerminoViagem) {
-        this.identificadorCartao = identificadorCartao;
+    public AvisoViagem(Cartao cartao, @NotBlank String destinoViagem, String ipAdress, String userAgent, @Future LocalDate dateTerminoViagem) {
+        this.identificadorCartao = cartao.getIdentificadorCartao();
         this.destinoViagem = destinoViagem;
         this.ipAdress = ipAdress;
         this.userAgent = userAgent;
@@ -76,5 +79,9 @@ public class AvisoViagem {
 
     public Cartao getCartao() {
         return cartao;
+    }
+
+    public String getUuidAvisoViagem() {
+        return uuidAvisoViagem;
     }
 }

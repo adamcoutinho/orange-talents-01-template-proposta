@@ -9,23 +9,19 @@ import java.time.LocalDate;
 
 public class CadastroAvisoViagemFormRequest {
 
-    @NotBlank
-    private String identificadorCartao;
 
-    @NotBlank
-    private String destinoViagem;
-
-    @NotBlank
-    private String ipAdress;
-
-    @NotBlank
-    private String userAgent;
 
     @Future
     private LocalDate dateTerminoViagem;
 
-    public AvisoViagem toModel(HttpServletRequest httpServletRequest) {
-        return new AvisoViagem();
+    @NotBlank
+    private String destinoViagem;
 
+    public LocalDate getDateTerminoViagem() {
+        return dateTerminoViagem;
+    }
+
+    public String getDestinoViagem() {
+        return destinoViagem;
     }
 }
