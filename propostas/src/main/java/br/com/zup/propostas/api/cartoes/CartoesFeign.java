@@ -15,8 +15,12 @@ public interface CartoesFeign {
     CartaoDetailResponse gerarCartao(CartaoFormRequest request);
 
     @PostMapping("/api/cartoes/{id}/bloqueios")
-    ResultadoBloqueioDetailResponse solicitarBloqueioCartao(@PathVariable("id") String identifcadorCartaoFormatoBanco,SolicitacaoBloqueioFormRequest solicitacaoBloqueioFormRequest);
+    ResultadoBloqueioDetailResponse solicitarBloqueioCartao(@PathVariable("id") String identifcadorCartao,SolicitacaoBloqueioFormRequest solicitacaoBloqueioFormRequest);
 
+    @PostMapping("/api/cartoes/{id}/avisos")
+    ResultadoAvisoViagemDetailResponse solicitarAvisoViagem(@PathVariable("id") String identificadorCartao,  SolicitacaoAvisoViagemFormRequest request);
 
+    @PostMapping("/api/cartoes/{id}/carteiras")
+    ResultadoCarteira solicitarCarteiraDigital(@PathVariable("id") String identificadorCartao,  SolicitacaoInclusaoCarteiraFormRequest request);
 
 }

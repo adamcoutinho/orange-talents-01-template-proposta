@@ -1,8 +1,8 @@
 package br.com.zup.propostas.core.criarpropostas;
 
-import br.com.zup.propostas.core.proposta.EnderecoFormRequest;
-import br.com.zup.propostas.core.proposta.PropostaFormRequest;
-import br.com.zup.propostas.core.proposta.SolicitanteFormRequest;
+import br.com.zup.propostas.core.actions.proposta.EnderecoFormRequest;
+import br.com.zup.propostas.core.actions.proposta.PropostaFormRequest;
+import br.com.zup.propostas.core.actions.proposta.SolicitanteFormRequest;
 
 public class PropostaBuilder {
 

@@ -15,14 +15,14 @@
     <appender name="consoleAppender" class="ch.qos.logback.core.ConsoleAppender">
         <encoder class="net.logstash.logback.encoder.LoggingEventCompositeJsonEncoder">
             <providers>
-                <timestamp/>
-                <version/>
-                <loggerName/>
-                <threadName/>
-                <logLevel/>
-                <mdc/>
+<!--                <timestamp/>-->
+<!--                <version/>-->
+<!--                <loggerName/>-->
+<!--                <threadName/>-->
+<!--                <logLevel/>-->
+<!--                <mdc/>-->
                 <message/>
-                <stackTrace/>
+<!--                <stackTrace/>-->
             </providers>
         </encoder>
     </appender>

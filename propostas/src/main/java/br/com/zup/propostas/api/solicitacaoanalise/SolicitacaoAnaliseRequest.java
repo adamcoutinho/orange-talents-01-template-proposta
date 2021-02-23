@@ -1,6 +1,6 @@
 package br.com.zup.propostas.api.solicitacaoanalise;
 
-import br.com.zup.propostas.models.Proposta;
+import br.com.zup.propostas.core.models.Proposta;
 
 public class SolicitacaoAnaliseRequest {
 
@@ -19,7 +19,7 @@ public class SolicitacaoAnaliseRequest {
 	public SolicitacaoAnaliseRequest(Proposta proposta) {
 		this.documento = proposta.getSolicitante().getDocumento();
 		this.nome = proposta.getSolicitante().getNome();
-		this.idProposta = proposta.getUuidProposta();
+		this.idProposta = proposta.getUuid();
 	}
 
 	public String getIdProposta() {

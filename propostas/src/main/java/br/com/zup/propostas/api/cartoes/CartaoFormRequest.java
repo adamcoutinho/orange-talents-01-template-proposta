@@ -1,6 +1,6 @@
 package br.com.zup.propostas.api.cartoes;
 
-import br.com.zup.propostas.models.Proposta;
+import br.com.zup.propostas.core.models.Proposta;
 
 public class CartaoFormRequest {
     private String documento;
@@ -10,7 +10,7 @@ public class CartaoFormRequest {
     public CartaoFormRequest(Proposta proposta) {
         this.documento = proposta.getSolicitante().getDocumento();
         this.nome = proposta.getSolicitante().getNome();
-        this.idProposta = proposta.getUuidProposta();
+        this.idProposta = proposta.getUuid();
     }
 
     public String getDocumento() {
