@@ -1,5 +1,5 @@
 <configuration>
-    <property  name="LOG_LOCATION" value="/home/adamcoutinho/workspace-orangestack/orange-talents-01-template-proposta/propostas"  />
+    <property  name="LOG_LOCATION" value="/home/adamcoutinho/workspace-orangestack/orange-talents-01-template-proposta/"  />
 
     <appender name="LOG_LOCATION-TO-FILE" class="ch.qos.logback.core.FileAppender">
 
