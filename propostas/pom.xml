@@ -119,11 +119,22 @@
             <version>3.3.1</version>
         </dependency>
 
+        <dependency>
+            <groupId>org.jasypt</groupId>
+            <artifactId>jasypt</artifactId>
+            <version>1.9.3</version>
+        </dependency>
+
     </dependencies>
 
     <build>
         <finalName>proposta</finalName>
         <plugins>
+            <plugin>
+            <artifactId>maven-antrun-plugin</artifactId>
+                 <version>1.7</version>
+
+            </plugin>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>

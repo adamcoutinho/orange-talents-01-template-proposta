@@ -13,14 +13,16 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.authorizeRequests(authorizeRequests ->
-                authorizeRequests
-                         // propostas
+        http .authorizeRequests()
+                .antMatchers("/actuator/**").permitAll()
+
+                // propostas
 //                        .antMatchers(HttpMethod.POST, "/propostas/criar").hasAuthority("SCOPE_propostas:read")
-                        .antMatchers(HttpMethod.POST, "/proposta/criar").permitAll()
-                        .antMatchers(HttpMethod.POST, "/biometria/{identificador-cartao}/criar").permitAll()
-                        .anyRequest().authenticated()
-        )
+                .antMatchers(HttpMethod.POST, "/proposta/criar").permitAll()
+                .antMatchers(HttpMethod.POST, "/biometria/{identificador-cartao}/criar").permitAll()
+                .anyRequest().authenticated()
+                .and()
+                .cors().disable()
                 .oauth2ResourceServer(OAuth2ResourceServerConfigurer::jwt);
     }
 }

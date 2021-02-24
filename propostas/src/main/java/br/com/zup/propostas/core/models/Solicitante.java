@@ -1,7 +1,11 @@
 package br.com.zup.propostas.core.models;
 
+import br.com.zup.propostas.core.actions.proposta.EncryptConverter;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import org.hibernate.annotations.ColumnTransformer;
 
+import javax.persistence.Column;
+import javax.persistence.Convert;
 import javax.persistence.Embedded;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -33,7 +37,18 @@ public class Solicitante implements Serializable {
     @SequenceGenerator(name = "sequence_solicitante", sequenceName = "sq_solicitante", allocationSize = 1)
     private Long id;
     
-    @NotBlank(message = "informe o documento.")  
+    @NotBlank(message = "informe o documento.")
+	@ColumnTransformer(
+			read =  "pgp_sym_decrypt(" +
+					"    test, " +
+					"    current_setting('encrypt.key')" +
+					")",
+			write = "pgp_sym_encrypt( " +
+					"    ?, " +
+					"    current_setting('encrypt.key')" +
+					") "
+	)
+//	@Column(columnDefinition = "documento")
     private String documento;
     
     @NotBlank(message = "informe o email.")

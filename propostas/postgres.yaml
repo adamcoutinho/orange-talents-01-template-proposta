@@ -4,7 +4,7 @@ services:
     image: postgres:9.6
     volumes:
       - postgres-volume2:/var/lib/postgresql/data
-      - ./databases.sql:/docker-entrypoint-initdb.d/databases.sql
+      - ./scripts.sql:/docker-entrypoint-initdb.d/scripts.sql
     ports:
       - "5433:5432"
     environment:
