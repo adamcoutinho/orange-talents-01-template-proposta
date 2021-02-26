@@ -15,14 +15,15 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http .authorizeRequests()
                 .antMatchers("/actuator/**").permitAll()
-
                 // propostas
 //                        .antMatchers(HttpMethod.POST, "/propostas/criar").hasAuthority("SCOPE_propostas:read")
                 .antMatchers(HttpMethod.POST, "/proposta/criar").permitAll()
                 .antMatchers(HttpMethod.POST, "/biometria/{identificador-cartao}/criar").permitAll()
                 .anyRequest().authenticated()
                 .and()
+                .csrf().disable()
                 .cors().disable()
                 .oauth2ResourceServer(OAuth2ResourceServerConfigurer::jwt);
+
     }
 }

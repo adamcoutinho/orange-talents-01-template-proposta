@@ -37,7 +37,6 @@ public class PropostaEndPoint {
     @Autowired
     private SolicitacaoAnaliseFeign solicitacaoAnaliseFeign;
 
-
     @GetMapping("/")
     public ResponseEntity<?> listarPropostas(){
         List<Proposta> propostas = propostaRepository.findAll();
@@ -64,7 +63,7 @@ public class PropostaEndPoint {
         Proposta proposta = request.toModel();
         try {
 
-            if(propostaRepository.findBySolicitanteDocumento(request.getSolicitanteFormRequest().getDocumento()).isPresent())
+            if(propostaRepository.existsBySolicitanteDocumento(request.getSolicitanteFormRequest().getDocumento()))
                 return ResponseEntity.unprocessableEntity().body("já existe documento cadastrado.");
 
             SolicitacaoAnaliseResponse solicitacaoAnaliseResponse = solicitacaoAnaliseFeign.analiseProposta(new SolicitacaoAnaliseRequest(proposta));

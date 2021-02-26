@@ -8,7 +8,7 @@ services:
     ports:
       - "5433:5432"
     environment:
-      - POSTGRES_DB=postgres
+      - POSTGRES_DB=proposals_db
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
       - MAX_CONNECTIONS=300

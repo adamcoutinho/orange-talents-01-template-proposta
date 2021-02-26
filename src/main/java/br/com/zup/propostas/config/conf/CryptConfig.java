@@ -10,7 +10,7 @@ public class CryptConfig {
 
 
     @Value("${jasypt}")
-    private String JASYPT_PASSWORD;
+    private String JASYPT_PASSWORD="asdaszxczx";
 
     @Bean
     public AES256TextEncryptor get(){

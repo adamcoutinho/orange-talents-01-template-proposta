@@ -1,10 +1,8 @@
 package br.com.zup.propostas.core.models;
 
-import br.com.zup.propostas.core.actions.proposta.EncryptConverter;
+import br.com.zup.propostas.utils.AttributeEncryptor;
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import org.hibernate.annotations.ColumnTransformer;
 
-import javax.persistence.Column;
 import javax.persistence.Convert;
 import javax.persistence.Embedded;
 import javax.persistence.Entity;
@@ -31,26 +29,15 @@ public class Solicitante implements Serializable {
 	public Solicitante() {
 		
 	}
-    
+	
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sequence_solicitante")
     @SequenceGenerator(name = "sequence_solicitante", sequenceName = "sq_solicitante", allocationSize = 1)
     private Long id;
     
     @NotBlank(message = "informe o documento.")
-	@ColumnTransformer(
-			read =  "pgp_sym_decrypt(" +
-					"    test, " +
-					"    current_setting('encrypt.key')" +
-					")",
-			write = "pgp_sym_encrypt( " +
-					"    ?, " +
-					"    current_setting('encrypt.key')" +
-					") "
-	)
-//	@Column(columnDefinition = "documento")
+	@Convert(converter = AttributeEncryptor.class)
     private String documento;
-    
     @NotBlank(message = "informe o email.")
     @Email(message = "informe um email valido.")
     private String email;
@@ -81,17 +68,8 @@ public class Solicitante implements Serializable {
 		this.email = email;
 		this.nome = nome;		
 		this.salario = salario;
-		this.salario=salario;
 		this.endereco =endereco;
 	}
-
-
-
-//	public Long getId() {
-//		return id;
-//	}
-
-
 
 	public String getDocumento() {
 		return documento;

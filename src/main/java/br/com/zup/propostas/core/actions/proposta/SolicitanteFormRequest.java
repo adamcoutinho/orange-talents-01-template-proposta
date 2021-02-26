@@ -29,6 +29,7 @@ public class SolicitanteFormRequest {
 	private BigDecimal salario;
 	
 	public Solicitante toModel(Endereco endereco) {
+
 		return new Solicitante(this.documento,this.email,this.nome,this.salario,endereco);
 	}
 	

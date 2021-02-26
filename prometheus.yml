@@ -12,4 +12,4 @@ scrape_configs:
         - job_name: 'propostas'
           metrics_path: '/actuator/prometheus'
           static_configs:
-                  - targets: ['HOST_IP:1111']
+                  - targets: ['192.168.0.16:1111']

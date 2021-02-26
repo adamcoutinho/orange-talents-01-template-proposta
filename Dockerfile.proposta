@@ -11,10 +11,10 @@ ARG JAR_FILE=target/proposta.jar
 #WORKDIR /opt/app
 
 # cp target/spring-boot-web.jar /opt/app/proposta.jar
-#COPY ${JAR_FILE} proposta.jar
+#COPY ${JAR_FILE} propostas.jar
 
-ADD ${JAR_FILE} proposta.jar
+ADD ${JAR_FILE} propostas.jar
 
 # EXPOSE 1111
 # java -jar /opt/app/app.jar
-ENTRYPOINT ["java","-Xmx512m","-jar","/proposta.jar"]
+ENTRYPOINT ["java","-Xmx512m","-jar","/propostas.jar"]

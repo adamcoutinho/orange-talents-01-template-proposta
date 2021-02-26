@@ -128,7 +128,7 @@
     </dependencies>
 
     <build>
-        <finalName>proposta</finalName>
+        <finalName>propostas</finalName>
         <plugins>
             <plugin>
             <artifactId>maven-antrun-plugin</artifactId>
